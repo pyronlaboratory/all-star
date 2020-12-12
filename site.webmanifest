@@ -4,7 +4,7 @@
     "theme_color": "#2173ED",
     "background_color": "#F1F3F6",
     "display": "standalone",
-    "scope": "/",
+    "scope": "https://pyronlaboratory.github.io/all-star/",
     "start_url": "https://pyronlaboratory.github.io/all-star/",
     "description": "Ronnie's Creative Space.",
     "orientation": "any",
