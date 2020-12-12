@@ -12,7 +12,7 @@
   <meta property="og:url" content="">
   <meta property="og:image" content="">
 
-  <link rel="manifest" href="site.webmanifest">
+  <!-- <link rel="manifest" href="site.webmanifest"> -->
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
@@ -1126,17 +1126,17 @@
     });
 
     /** Shephered and Tour Animations */
-    enquire.register(large_min, {
-      match: function() {
-        loadJS('./scripts/shepherd.js/dist/js/shepherd.min.js');
-        loadJS('scripts/tour.js');
-      },
+    // enquire.register(large_min, {
+    //   match: function() {
+    //     loadJS('./scripts/shepherd.js/dist/js/shepherd.min.js');
+    //     loadJS('scripts/tour.js');
+    //   },
 
-      unmatch: function() {
-        unloadJS('./scripts/shepherd.js/dist/js/shepherd.min.js');
-        unloadJS('scripts/tour.js');
-      }
-    });
+    //   unmatch: function() {
+    //     unloadJS('./scripts/shepherd.js/dist/js/shepherd.min.js');
+    //     unloadJS('scripts/tour.js');
+    //   }
+    // });
 
     /** Hero Animation Sequence/Timeline for large screens */
     enquire.register(xtra_large_min, {
