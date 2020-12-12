@@ -328,7 +328,7 @@
   justify-content: center;
   align-items: center;
   margin-right: 0;
-  margin-top: -10vh;
+  margin-top: -5vh;
 }
 
 .card__action .button {
@@ -355,6 +355,13 @@
   font-weight: 600;
 }
 
+.card__action a {
+  text-decoration: none;
+  color: #2173ED;
+  font-weight: 700;
+
+}
+
 #slide-2 > div:nth-child(1) > div.card__content.flex-container.col.align-center.center > lottie-player,
 #slide-2 > div:nth-child(2) > div.card__content.flex-container.col.align-center.center > lottie-player,
 #slide-2 > div:nth-child(3) > div.card__content.flex-container.col.align-center.center > lottie-player,
@@ -363,16 +370,15 @@
   height: auto;
 }
 
-body > div.slides-container-web > div.gallery > div:nth-child(1) > 
-  div.card__content.flex-container.col.align-center.center > div > span:after,
-  body > div.slides-container-web > div.gallery > div:nth-child(2) > 
-  div.card__content.flex-container.col.align-center.center > div > span:after,
-  body > div.slides-container-web > div.gallery > div:nth-child(3) > 
-  div.card__content.flex-container.col.align-center.center > div > span:after,
-  body > div.slides-container-web > div.gallery > div:nth-child(4) > 
-  div.card__content.flex-container.col.align-center.center > div > span:after {
-    content: "Open Project.";
-  }
+
+#slide-2 > div:nth-child(1) > div.card__content.flex-container.col.align-center.center > div > a > span:after,
+#slide-2 > div:nth-child(2) > div.card__content.flex-container.col.align-center.center > div > a > span:after,
+#slide-2 > div:nth-child(3) > div.card__content.flex-container.col.align-center.center > div > a > span:after,
+#slide-2 > div:nth-child(4) > div.card__content.flex-container.col.align-center.center > div > a > span:after {
+  content: "Open Project.";
+  color: #2173ED;
+  font-weight: 700;
+}
 
 body > div.slides-container-tab > div.gallery > div:nth-child(1) > 
   div.card__content.flex-container.col.align-center.center > div > span:after,

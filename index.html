@@ -12,8 +12,9 @@
   <meta property="og:url" content="">
   <meta property="og:image" content="">
 
-  <!-- <link rel="manifest" href="site.webmanifest"> -->
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="apple-touch-icon" href="./assets/icons/favicon.ico">
+  <link rel="icon" href="./assets/icons/favicon.ico">
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="./styles/normalize.css">
@@ -545,7 +546,7 @@
           </defs>
           </svg>
         </div>
-        <div class="hero__scroll"><img src="./assets/image/arrow.svg" /><p>Projects.</p></div>
+        <div class="hero__scroll"><a href="#slide-2"><img src="./assets/image/arrow.svg" />Projects.</a></div>
       </div>
     </div>
 
@@ -1084,23 +1085,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.js"></script>
 
   <script type="text/javascript">
-    const xtra_large_min = "screen and (min-width: 1200px)";
-    const large_min = "screen and (min-width: 1000px)";
+
     const medium_min = "screen and (min-width: 850px)";
     const medium_max = "screen and (max-width: 850px)";
-    const small_min = "screen and (min-width: 600px)";
 
-    /** Hero Animation Sequence/Timeline and Parallax Effect */
-    enquire.register(small_min, {
-      match : function() {
-          loadJS('scripts/hero.tab.js');
-          loadJS('scripts/parallax.tab.js');
-      },
-
-      unmatch: function() {
-          unloadJS('scripts/parallax.tab.js');
-      }
-    });
 
     /** Menu Toggle */
     enquire.register(medium_max, { 
@@ -1112,20 +1100,45 @@
       }
     });
 
-    /** Snap Scroll and Mailbox Animation */
+    /** 
+      Hero Animation Sequence/Timeline,
+      Parallax Effect,
+      Snap Scroll and 
+      Mailbox Animation 
+    */
     enquire.register(medium_min, {
       match: function() {
         loadJS('./scripts/scroll.js');
         loadJS('./scripts/subscribe.js');
+
+        /* unload default animation sequence */
+        unloadJS('scripts/hero.tab.js');
+        /* load large screen animation sequence */
+        loadJS('scripts/hero.web.js');
+
+        /* unload default parallax effect */
+        unloadJS('scripts/parallax.tab.js');
+        /* load large screen parallax effect */
+        loadJS('scripts/parallax.web.js');
       },
 
       unmatch: function() {
         unloadJS('./scripts/scroll.js');
         unloadJS('./scripts/subscribe.js');
+
+        /* unload large screen animation sequence */
+        unloadJS('scripts/hero.web.js');
+        /* load default animation sequence */
+        loadJS('scripts/hero.tab.js');
+
+        /* unload large screen parallax effect */
+        unloadJS('scripts/parallax.web.js');
+        /* load default parallax effect */
+        loadJS('scripts/parallax.tab.js');
       }
     });
 
-    /** Shephered and Tour Animations */
+    /** Needs Fix: Shephered and Tour Animations */
     // enquire.register(large_min, {
     //   match: function() {
     //     loadJS('./scripts/shepherd.js/dist/js/shepherd.min.js');
@@ -1137,32 +1150,32 @@
     //     unloadJS('scripts/tour.js');
     //   }
     // });
-
-    /** Hero Animation Sequence/Timeline for large screens */
-    enquire.register(xtra_large_min, {
-      match: function() {
-        /* unload default animation sequence */
-        unloadJS('scripts/hero.tab.js');
-        /* load large screen animation sequence */
-        loadJS('scripts/hero.web.js');
-
-        loadJS('scripts/parallax.web.js');
-      },
-      unmatch: function() {
-        unloadJS('scripts/hero.web.js');
-        unloadJS('scripts/parallax.web.js');
-      }
-    });
   </script>
+
+
   
-  
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <!-- Service Worker and Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script type="text/javascript">
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
 
+  <script type="text/javascript">
+
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js', { scope: '/' })
+      .then(function(registration) {
+            console.log('Service Worker Registered');
+      });
+
+    navigator.serviceWorker.ready.then(function(registration) {
+       console.log('Service Worker Ready');
+    });
+  }
+  </script>
+
+  
 </body>
 
 </html>
