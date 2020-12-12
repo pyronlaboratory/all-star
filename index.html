@@ -13,9 +13,7 @@
   <meta property="og:image" content="">
 
   <link rel="manifest" href="./site.webmanifest">
-  <link rel="apple-touch-icon" href="./assets/icons/favicon.ico">
-  <link rel="icon" href="./assets/icons/favicon.ico">
-  <!-- Place favicon.ico in the root directory -->
+  <link rel="icon" href="./favicon.png">
 
   <link rel="stylesheet" href="./styles/normalize.css">
   
@@ -1164,7 +1162,7 @@
   <script type="text/javascript">
 
   if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js', { scope: 'https://pyronlaboratory.github.io/all-star/' })
+    navigator.serviceWorker.register('../service-worker.js', { scope: '/' })
       .then(function(registration) {
             console.log('Service Worker Registered');
       });
