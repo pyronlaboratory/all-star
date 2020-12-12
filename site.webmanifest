@@ -1,0 +1,17 @@
+{
+    "name": "Ronnie | All Star.",
+    "short_name": "All Star.",
+    "theme_color": "#2173ED",
+    "background_color": "#F1F3F6",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "https://ronnie.tech/",
+    "description": "Ronnie's Creative Space.",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "./assets/icons/favicon-196x196.png",
+            "sizes": "196x196"
+        }
+    ]
+}
