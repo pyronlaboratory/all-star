@@ -1,0 +1,206 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/about.css">
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
+
+  <script>
+    document.documentElement.className="js";
+    var supportsCssVars=function(){var e,t=document.createElement("style");
+    return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};
+    supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");
+  </script>
+  <meta name="theme-color" content="#2173ED">
+</head>
+
+<body class="noselect">
+
+  <div class="header">
+      <ul class="flex-container row space-between">
+        <li>
+          <a href="#" class="logo">Ronnie.</a>
+        </li>
+        <li>
+          <div class="flex-container row menu" onclick="">
+            <a href="./about.html" class="menu__1">About.</a>
+            <a href="./contact.html" class="menu__2">Contact.</a>
+          </div>
+          <div class="flex-container col align-end hamburger" onclick="">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </li>
+      </ul>
+  </div>
+
+  <div class="profile flex-container row center align-center">
+    <div class="profile__wrap flex-container col center align-center">
+      <div class="profile__card__container flex-container col center align-center">
+        <div class="profile__card">
+          <div class="profile__avatar">
+            <div class="profile__circle"></div>
+            <img src="./assets/image/avatar-1.svg" alt="ronnie" class="avatar" />
+          </div>
+          <div class="profile__info">
+            <h1 class="profile__title">Ronit Mishra</h1>
+            <h3 class="profile__desc">github@pyronlaboratory</h3>
+            <h3 class="profile__desc">linkedin@ronnie94official</h3>
+          </div>
+        </div>
+      </div>
+      <div class="profile__kofi flex-container col">
+        <h2 class="profile__kofi_text">Help me develop awesome open-source projects.</h2>
+        <script type='text/javascript' src='./scripts/ko-fi.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#2173ed', 'F1F1VEXA');kofiwidget2.draw();</script> 
+      </div>
+    </div>
+
+    <div class="profile__text flex-container col center">
+      <div class="profile__normalize">
+      <h1 class="profile__text__title">
+       <span>NAMASTE. BONJOUR. HOLA.</span>
+      </h1>
+      <p style="font-size:22px; font-weight:800; margin-top: 10vh;">I'm Ronnie. </p>
+      <p>I'm a fullstack web engineer with 5 years of experience in developing and maintaining enterprise applications.</p>
+      <p>I run a small tech hub on the west coast of India, from where I collaborate with clients remotely across the globe.</p>
+      <p>I work with Python, Git and Docker containers. All. Day. Long.</p>
+      <p>My appetite for exploring the evolving trends in the industry, has helped me to grow my toolbet, which has a wide range of technologies including, but not limited to, Amazon Web Services, Elasticsearch, Tensorflow and Reactive frontend with Angular/Typescript, Lighthouse, Workbox.</p>
+      <p>I follow PyCon and Google's opinionated reference for building amazing web experiences.</p>
+      <p>I often contribute back to the community using various means. I train and mentor young engineers as well as post graduates in becoming industry ready. I've a growing reputation on GitHub and StackOverflow.</p>
+      <p>Levelling up everyday with ☕ & 🕒.</p>
+      <img src="./assets/image/sign.min.png" height="60px" width="350px" style="margin-top: 5vh;margin-bottom: 30vh;" />
+
+      </div>
+    </div>
+
+    <div class="back">
+      <svg height="100px" width="100">
+        <path d="M 47.5547,8.05465 H 4.94603 L 10.0165,3.00878 C 10.5822,2.44568 10.5844,1.53058 10.0213,0.964816 9.45823,0.398976 8.54305,0.396881 7.97729,0.959902 L 0.425238,8.47552 c -5.06e-4,4.4e-4 -8.67e-4,9.4e-4 -0.0013,0.00138 -0.564323,0.56309 -0.566129,1.48115 -1.45e-4,2.0461 5.06e-4,5e-4 8.67e-4,10e-4 0.001301,0.0014 L 7.97714,18.04 c 0.5657,0.563 1.48087,0.561 2.04406,-0.0049 0.5631,-0.5658 0.5609,-1.4809 -0.0049,-2.044 L 4.94603,10.9453 H 47.5547 C 48.353,10.9453 49,10.2982 49,9.49996 49,8.70172 48.353,8.05465 47.5547,8.05465 Z" fill="black"/>
+      </svg> <p>HOME.</p>
+    </div>
+  </div>
+
+
+  <div class="overlay">
+    <nav class="menu__container">
+      <div class="menu__item">
+        <a class="menu__item-link">About.</a>
+
+        <div class="marquee">
+          <div class="marquee__inner" aria-hidden="true">
+            <span>technical.</span>
+            <span>profile.card</span>
+          </div>
+        </div>
+      </div>
+      <div class="menu__item">
+        <a class="menu__item-link">Events.</a>
+
+        <div class="marquee">
+          <div class="marquee__inner" aria-hidden="true">
+            <span>meetups.</span>
+            <span>registration.</span>
+            <span>&.</span>
+            <span>schedule.</span>            
+          </div>
+        </div>
+      </div>
+      <div class="menu__item">
+        <a class="menu__item-link">Marketplace.</a>
+
+        <div class="marquee">
+          <div class="marquee__inner" aria-hidden="true">
+            <span>download.</span>
+            <span>open.</span>
+            <span>source.</span>
+            <span>resources.</span>
+          </div>
+        </div>
+      </div>
+      <div class="menu__item">
+        <a class="menu__item-link">Contact.</a>
+
+        <div class="marquee">
+          <div class="marquee__inner" aria-hidden="true">
+            <span>get.</span>
+            <span>in.</span>
+            <span>touch.</span>
+            <span>with.me.</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <a class="exit" href="#">
+      <p style="color:white;">EXIT.</p>
+    </a>
+  </div>
+  
+  <!-- JavaScript Internal, Vendors and CDN-->
+  <script type="text/javascript" src="scripts/modernizr.min.js" ></script>
+  <script type="text/javascript" src="scripts/enquire.min.js" ></script>
+  <script type="text/javascript" src="scripts/plugins.js" ></script>
+  <script type="text/javascript" src="scripts/load.js"></script>
+  
+  <script type="text/javascript">
+
+    const medium_max = "screen and (max-width: 850px)";
+    const xtra_small_min = "screen and (min-width: 350px)";
+
+    /** Menu Toggle */
+    enquire.register(medium_max, { 
+      match: function() {
+        loadJS('./scripts/menu.js');
+      },
+      unmatch: function() {
+        unloadJS('./scripts/menu.js');
+      }
+    });
+
+    /* Card Animations */
+    enquire.register(xtra_small_min, {
+      match: function() {
+        loadJS('./scripts/profile.js');
+      },
+      unmatch: function() {
+        unloadJS('./scripts/profile.js');
+      }
+    });
+
+  </script>
+
+
+  <!-- Lottie and Bodymovin Scripts -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
