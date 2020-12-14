@@ -1217,7 +1217,7 @@ body
   }
 
   body > div.slides-container-mob > div.connect > div.connect_button_group > div:nth-child(2) {
-    width: 30vw;
+    width: 50vw;
   }
 
   .connect__action span {
@@ -1239,6 +1239,7 @@ body
       -7px -7px 20px #c5dbff, 
       inset 0px 0px 4px rgba(255, 255, 255, 0.2);
     transition: box-shadow 399ms ease-in-out;
+    width: 50vw;
   }
 
   .connect__action:hover {
@@ -1308,7 +1309,7 @@ body
   body > div.slides-container-mob > div.gallery > div:nth-child(5) > div > div:after {
     content: "GitHub.";
     margin-top: -4vh;
-    margin-left: 3.4em;
+    margin-left: 1.8em;
     font-weight: 700;
     color: #333;
   }
@@ -1484,5 +1485,14 @@ body
   .hero__action {
     height: 2.1em;
     width: 10em;
+  }
+
+  .hero__text, .connect__text {
+    font-size: 5vw;
+    width: 70vw;
+  }
+
+  .hero__text_focus, .connect__text_focus {
+    font-size: 6vw;
   }
 }
