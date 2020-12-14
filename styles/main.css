@@ -42,7 +42,10 @@ body {
 svg { cursor: pointer; }
 
 
-
+a {
+  text-decoration: none;
+  color: white;
+}
 
 /* Scrollbar configurations */
 
