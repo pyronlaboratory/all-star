@@ -4,8 +4,10 @@
 
 
 .page_404 { 
-    padding:40px 0; 
     background:#fff;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
 }
 
 .page_404  img{ 
@@ -29,14 +31,14 @@
 }
 			 
 .link_404 {			 
-	color: #fff!important;
-    padding: 1em 4em;
+    color: #fff!important;
+    padding: 0.8em 3em;
     background: #2173ed;
     margin: 20px 0;
     display: inline-block;
     border-radius: 35px;
-    font-size: 1.5em;
-    font-weight: 900;
+    font-size: 1.2em;
+    font-weight: 600;
 }
 
 .content_box_404 { 
