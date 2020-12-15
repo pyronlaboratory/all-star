@@ -342,3 +342,22 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
   }
 
 }
+
+@media (max-width: 350px) {
+
+  .profile__wrap {
+    padding: 0;
+  }
+
+  .profile__kofi {
+    margin-top: 0;
+  }
+
+  .profile__kofi_text {
+    font-size: 1.4em;
+  }
+
+  img.kofiimg {
+    width: 0px !important;
+  }
+}

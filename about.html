@@ -217,14 +217,31 @@
 
   <!-- Lottie and Bodymovin Scripts -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>  
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9ZPH52HK8"></script>
   <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-T9ZPH52HK8');
   </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  <script type="text/javascript">
+
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('../service-worker.js', { scope: '/' })
+      .then(function(registration) {
+            console.log('Service Worker Registered');
+      });
+
+    navigator.serviceWorker.ready.then(function(registration) {
+       console.log('Service Worker Ready');
+    });
+  }
+  </script>
 </body>
 
 </html>
