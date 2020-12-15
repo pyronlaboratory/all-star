@@ -12,24 +12,25 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="./assets/icons/safari-pinned-tab.svg" color="#2173ed">
-  <meta name="msapplication-TileColor" content="#2173ed">
-  <meta name="theme-color" content="#2173ed">
+  <meta name="msapplication-TileColor" content="#2173ED">
+  <meta name="theme-color" content="#2173ED">
 
   <link rel="preload" href="./styles/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="./styles/normalize.css"></noscript>
   
+  <!-- Optimize font load -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   
   <link rel="preload" href="./styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="./styles/main.css"></noscript>
 
-  <link rel="preload" href="./styles/home.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="./styles/home.css"></noscript>
+  <link rel="preload" href="./styles/contact.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="./styles/contact.css"></noscript>
 
-  <script async src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-  <script async src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
 
-  <script async>
+  <script>
     document.documentElement.className="js";
     var supportsCssVars=function(){var e,t=document.createElement("style");
     return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};
@@ -43,7 +44,7 @@
   <div class="header">
       <ul class="flex-container row space-between">
         <li>
-          <a href="#" class="logo">Ronnie.</a>
+          <a href="./index.html" class="logo">Ronnie.</a>
         </li>
         <li>
           <div class="flex-container row menu" onclick="">
@@ -157,16 +158,19 @@
     </form>
 
     <div class="back">
+    <a href="./">
       <svg height="100px" width="100">
         <path d="M 47.5547,8.05465 H 4.94603 L 10.0165,3.00878 C 10.5822,2.44568 10.5844,1.53058 10.0213,0.964816 9.45823,0.398976 8.54305,0.396881 7.97729,0.959902 L 0.425238,8.47552 c -5.06e-4,4.4e-4 -8.67e-4,9.4e-4 -0.0013,0.00138 -0.564323,0.56309 -0.566129,1.48115 -1.45e-4,2.0461 5.06e-4,5e-4 8.67e-4,10e-4 0.001301,0.0014 L 7.97714,18.04 c 0.5657,0.563 1.48087,0.561 2.04406,-0.0049 0.5631,-0.5658 0.5609,-1.4809 -0.0049,-2.044 L 4.94603,10.9453 H 47.5547 C 48.353,10.9453 49,10.2982 49,9.49996 49,8.70172 48.353,8.05465 47.5547,8.05465 Z" fill="black"/>
-      </svg> <p>HOME.</p>
+      </svg> 
+      <p>HOME.</p>
+    </a>
     </div>
   </div>
 
   <div class="overlay">
     <nav class="menu__container">
       <div class="menu__item">
-        <a href="/about.html" class="menu__item-link">About.</a>
+        <a href="./about.html" class="menu__item-link">About.</a>
 
         <div class="marquee">
           <div class="marquee__inner" aria-hidden="true">
@@ -176,7 +180,7 @@
         </div>
       </div>
       <div class="menu__item">
-        <a href="/" class="menu__item-link">Events.</a>
+        <a href="./" class="menu__item-link">Events.</a>
 
         <div class="marquee">
           <div class="marquee__inner" aria-hidden="true">
@@ -188,7 +192,7 @@
         </div>
       </div>
       <div class="menu__item">
-        <a href="/" class="menu__item-link">Marketplace.</a>
+        <a href="./" class="menu__item-link">Marketplace.</a>
 
         <div class="marquee">
           <div class="marquee__inner" aria-hidden="true">
@@ -200,7 +204,7 @@
         </div>
       </div>
       <div class="menu__item">
-        <a href="/contact.html" class="menu__item-link">Contact.</a>
+        <a href="./contact.html" class="menu__item-link">Contact.</a>
 
         <div class="marquee">
           <div class="marquee__inner" aria-hidden="true">
@@ -233,7 +237,21 @@
 
   <script type="text/javascript">
 
+    const large_min = "screen and (min-width: 1150px)";
     const medium_max = "screen and (max-width: 850px)";
+
+    /** Form animation */
+    enquire.register(large_min, {
+      match: function() {
+        /* load large screen animation sequence */
+        loadJS('scripts/gsap.js/form.web.js');
+      },
+
+      unmatch: function() {
+        /* unload large screen animation sequence */
+        unloadJS('scripts/gsap.js/form.web.js');
+      }
+    });
 
     /** Menu Toggle */
     enquire.register(medium_max, { 
@@ -244,6 +262,8 @@
         unloadJS('./scripts/menu.js');
       }
     });
+
+
 
   </script>
 
