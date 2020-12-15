@@ -1,3 +1,7 @@
+body {
+	overflow: hidden;
+}
+
 /* Contacts */
 
 .contact {
@@ -11,7 +15,7 @@
 }
 
 .contact__banner {
-    position: absolute;
+    position: fixed;
     bottom: -5em;
     left: 3em;
 	z-index: 3;
@@ -137,6 +141,10 @@
 
 
 @media (max-width: 1150px) {
+
+	body {
+		overflow: auto;
+	}
 
 	.contact {
 		overflow-y: auto;

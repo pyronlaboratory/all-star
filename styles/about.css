@@ -217,8 +217,8 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
     display: flex;
     width: 45vw;
     height: 70vh;
-    justify-content: flex-start;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
   }
 
   .profile__kofi_text {
@@ -227,12 +227,11 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
     text-transform: initial;
     font-weight: 600;
     margin-bottom: 10vh;
-    text-align: right;
+    text-align: center;
     color: #333;
   }
 
 }
-
 
 @media (max-width: 900px) {
   .profile__text {
@@ -257,6 +256,7 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
   .profile__kofi {
     padding-right: 1.4em;
   }
+
 }
 
 @media (max-width: 750px) {
@@ -293,13 +293,13 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
     text-align: center;
   }
 
-
 }
 
 @media (max-width: 650px) {
   .profile__card {
     width: 80vw;
   }
+
 }
 
 @media (max-width: 600px) {
@@ -321,6 +321,7 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
   .profile__text {
     padding: 2em;
   }
+
 }
 
 @media (max-width: 550px) {

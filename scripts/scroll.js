@@ -24,6 +24,19 @@ var keyCodes = {
   RIGHT: 39
 }
 
+
+
+var p0 = gsap.timeline(); //create the project animation timeline
+
+//initiate the sequence
+p0.from(".card__content", { x: -500,  duration: 0.5, ease: "expo" })
+  .from(".card__lottie_player", { y: -100, opacity: 0, duration: 0.5, ease: "slow"})
+  .from(".card__action", { y: 50, opacity: 0, duration: 0.1, ease: "expo"})
+  .from(".card__description", { x: 100,  opacity: 0, duration: 0.5, ease: "expo" });
+
+p0.pause();
+
+
 //Going to the first slide
 goToSlide($currentSlide);
 
@@ -54,7 +67,9 @@ $document.touchwipe({
 ******
 */
 
-
+function animateGallery() {
+  p0.restart();
+}
 
 /*
 *  Internal functions for navigation
@@ -152,6 +167,7 @@ function goToSlide($slide) {
 *   You can also do other things in this function, such as changing page title
 * */
 function onSlideChangeEnd() {
+  
   isAnimating = false;
 }
 
@@ -176,7 +192,6 @@ function onResize(event) {
     //The current slide should be always on the top
     gsap.set($slidesContainer, {scrollTo: {y: pageHeight * $currentSlide.index() }});
   }
-
 }
 
 
@@ -203,6 +218,8 @@ function show(n) {
   }
 
   slides[index-1].style.display = "flex";
+
+  animateGallery();
 
   document.querySelector('.current').innerHTML = ''.concat(index, "/");
   document.querySelector('.total').innerHTML = slides.length;

@@ -465,6 +465,7 @@ input:focus::-webkit-input-placeholder {
   display: flex;
   align-items: flex-start;
   flex-direction: row;
+  z-index: 3;
 }
 
 
@@ -476,7 +477,10 @@ input:focus::-webkit-input-placeholder {
   letter-spacing: 0.5px;
 }
 
-
+.back a {
+  display: contents;
+  color: black;
+}
 
 
 
