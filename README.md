@@ -1,4 +1,4 @@
-<img src="favicon.png" /> 
+# All Star Portfolio
+## Developed by @pyronlaboratory
 
-All Star Portfolio
-Developed by @pyronlaboratory
+<img src="favicon.ico" align="left"  /> 
