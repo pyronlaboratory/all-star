@@ -416,6 +416,9 @@ a.menu__2 {
 .floating-label-field--s1:invalid,
 .floating-label-field--s2:invalid {
   border-color: #2173ED; 
+  color: #333;
+  font-size: 1em;
+  font-weight: 500;
 }
 
 .floating-label-field--s1:not(textarea), 
@@ -465,7 +468,7 @@ input:focus::-webkit-input-placeholder {
   display: flex;
   align-items: flex-start;
   flex-direction: row;
-  z-index: 3;
+  z-index: 4;
 }
 
 

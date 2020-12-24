@@ -597,7 +597,19 @@ body >
   background-size: 100% 88%;
 }
 
+.notes__copy_t {
+    text-align: center;
+    margin: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    font-weight: 400;
+}
 
+.notes__copy_t a {
+  color: black;
+}
 
 
 /* Tour guide */
@@ -738,7 +750,6 @@ body
     right: -15%;
     width: 30vw;
   }
-
 }
 
 /* Desktop and Laptops */
@@ -760,7 +771,6 @@ body
     right: -9%;
     width: 30vw;
   }
-
 }
 
 /* Small Screen Desktop and Laptop */
@@ -787,7 +797,6 @@ body
     
     font-size: 2em;
   }
-
 }
 
 /* Tablets Landscape View */
@@ -807,7 +816,6 @@ body
     flex-direction: row;
     height: 100vh;
   }
-
 }  
 
 @media (max-width: 900px) {
@@ -884,8 +892,7 @@ body
   .notes__copy {
     
     right: 6em;
-  }
-  
+  } 
 }
 
 /* Tablets */
@@ -946,6 +953,12 @@ body
     margin-top: 60vh;
   }
 
+  body > div.slides-container-tab > div.gallery > div:nth-child(1) > div.card__content.flex-container.col.align-center.center > div > a > span:after,
+  body > div.slides-container-tab > div.gallery > div:nth-child(2) > div.card__content.flex-container.col.align-center.center > div > a > span:after,
+  body > div.slides-container-tab > div.gallery > div:nth-child(3) > div.card__content.flex-container.col.align-center.center > div > a > span:after,
+  body > div.slides-container-tab > div.gallery > div:nth-child(4) > div.card__content.flex-container.col.align-center.center > div > a > span:after {
+    content: "GitHub";
+  }
   .card__description h1 {
     font-size: 28px;
     margin-top: 15vh;
@@ -1005,7 +1018,7 @@ body
   }
 
   #mailboxForm {
-    width: 75vw;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1058,7 +1071,6 @@ body
     right: auto;
     margin-bottom: -15vh;
   }
-
 }
 
 @media (max-width: 700px) {
@@ -1124,11 +1136,11 @@ body
   .footer .notes {
     padding: 9em;
   }
-
 }
 
 /* Mobile Large */
 @media (max-width: 600px) {
+ 
   .slides-container-tab {
     display: none;
     visibility: hidden;
@@ -1147,11 +1159,11 @@ body
   .slides-container-mob .hero__avatar_mob {
     display: flex;
     position: absolute;
-    height: 45vh;
+    height: 40vh;
     right: 0;
     left: 0;
-    top: 0;
-    bottom: 30vh;
+    top: -150px;
+    bottom: 20vh;
     z-index: 1;
     margin: auto;
   }
@@ -1159,6 +1171,7 @@ body
   .hero {
     background: white;
     justify-content: flex-end;
+    padding: 2em;
   }
 
   .hero__content {
@@ -1166,14 +1179,11 @@ body
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    width: 92%;
+    width: 100%;
     height: 55vh;
     border-radius: 15px;
     background: #f1f3f5;
-    padding: 2em;
-    margin: 2em;
-    margin-left: 1.5em;
-    margin-bottom: 0;
+    margin: 0;
   }
 
   .hero__text, .connect__text {
@@ -1183,11 +1193,12 @@ body
     line-height: 2em;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: 20vh;
     width: 60vw;
     text-align: center;
     margin-bottom: 2vh;
+    margin-top: 15vh;
   }
 
   .hero__text_focus, .connect__text_focus {
@@ -1225,6 +1236,27 @@ body
     padding: 0px;
   }
 
+  .hero__action {
+    font: 1.4em Montserrat;
+    height: 2.1em;
+    width: 8em;
+  }
+
+  .hero__content { 
+    height: 65vh;
+    justify-content: center;
+  }
+
+  .hero__text, .connect__text {
+    font-size: 4vw;
+    width: 70vw;
+    margin-top: 20vh;
+  }
+
+  .hero__text_focus, .connect__text_focus {
+    font-size: 5vw;
+  }
+
   .connect {
     background: #aacaff;
     height: 75vh;
@@ -1238,13 +1270,28 @@ body
     padding: 5em;
   }
 
+  .connect {
+    background: #2173ED;
+    height: 100vh;
+    margin: 0;
+    width: 100vw;
+    border-radius: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 0em;
+    color: white;
+  }
+
+
   .connect_button_group {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 25vh;
-    margin-top: 5vh;
+    margin-bottom: 10vh;
+    height: 30vh;
   }
 
   .connect__action {
@@ -1264,8 +1311,8 @@ body
     display: flex;
     justify-content: center;
     padding: 1.2em;
-    color: #333;
-    font-weight: 800;
+    color: white;
+    font-weight: 700;
     font-size: 0.9em;
     letter-spacing: 1px;
     line-height: 1.2em;
@@ -1287,6 +1334,16 @@ body
       inset 7px 7px 15px rgba(55, 84, 170, 0.15), 
       inset -7px -7px 20px #c5dbff, 
       0px 0px 4px rgba(255, 255, 255, 0.2);
+  }
+
+  .connect__action {
+    box-shadow: 5px 5px 10px #1c62c9, 
+             -5px -5px 10px #2684ff;
+  }
+
+  .connect__action:hover {
+    box-shadow: inset 5px 5px 10px #1c62c9, 
+            inset -5px -5px 10px #2684ff;
   }
 
   .gallery__text {
@@ -1311,7 +1368,7 @@ body
 
   .card__description {
     background: #f1f3f6;
-    width: 90vw;
+    width: 86vw;
     margin: 1.5em;
     border-radius: 15px;
     height: max-content;
@@ -1340,8 +1397,6 @@ body
     top: -23vh;
     height: 30em;
   }
-
-
   
   body > div.slides-container-mob > div.gallery > div:nth-child(2) > div > div:after,
   body > div.slides-container-mob > div.gallery > div:nth-child(3) > div > div:after,
@@ -1352,6 +1407,10 @@ body
     margin-left: 1.8em;
     font-weight: 700;
     color: #333;
+  }
+
+  .card__tags {
+    margin-bottom: 20vh;
   }
 
   .card__tags .chip {
@@ -1365,7 +1424,7 @@ body
   }
 
   .card__action .button {
-    
+    padding: 20px 60px 10px 60px;
     width: 20vw;
   }
 
@@ -1407,15 +1466,30 @@ body
     font-size: 0.8em;
 
   }
-
 }
-
 
 @media (max-width: 400px) {
   
+
   .hero__action {
-    width: 11em;
     font: 1.4em Montserrat;
+    height: 2.1em;
+    width: 8em;
+  }
+
+  .hero__content { 
+    height: 65vh;
+    justify-content: center;
+  }
+
+  .hero__text, .connect__text {
+    font-size: 5vw;
+    width: 70vw;
+    margin-top: 20vh;
+  }
+
+  .hero__text_focus, .connect__text_focus {
+    font-size: 6vw;
   }
 
   .card__content {
@@ -1426,6 +1500,10 @@ body
   .card__action {
     
     margin-top: -25%;
+  }
+
+  .card__description {
+    width: 85%;
   }
 
   .card__description h1 {
@@ -1454,9 +1532,11 @@ body
   }
 
   #mailboxForm {
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100vw; 
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin: 0;
+    padding: 0; 
   }
 
   .mailbox__form {
@@ -1481,7 +1561,7 @@ body
   }
 
   .footer .mailbox .subscribe__button .button {
-    
+    padding: 1em;
     width: 100%;
   }
 
@@ -1505,34 +1585,49 @@ body
     margin-top: 10vh;
   }
 
+  .notes__action .button {
+    padding: 1em 4.5em;
+  }
+
   .notes__copy {
     
     margin-top: 30vh;
   }
 
+  .notes__copy_t {
+    margin-left: 0;
+  }
+
   .mailbox__text p{
     font-size: 0.8em;
-  }
-  
+  } 
 }
 
 @media (max-width: 350px) {
   .slides-container-mob .hero__avatar_mob {
-    left: -8%;
-    height: 40vh;
+    left: -2%;
+    height: 35vh;
+    top: -100px;
   }
 
   .hero__action {
     height: 2.1em;
-    width: 10em;
+    width: 8em;
+  }
+
+  .hero__content { 
+    height: 65vh;
+    justify-content: center;
   }
 
   .hero__text, .connect__text {
     font-size: 5vw;
     width: 70vw;
+    margin-top: 20vh;
   }
 
   .hero__text_focus, .connect__text_focus {
     font-size: 6vw;
   }
+
 }

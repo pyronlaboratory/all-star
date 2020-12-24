@@ -73,6 +73,7 @@
 }
 
 .profile__desc {
+  cursor: pointer;
   /* border: 1px solid #c7c7c7; */
   border-radius: 35px;
   width: 60%;

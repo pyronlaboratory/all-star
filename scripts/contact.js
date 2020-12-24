@@ -30,12 +30,10 @@ function highlight(e) {
 }
 
 function unhighlight(e) {
-  console.log("dragleave..drop");
   dropArea.classList.remove('highlight')
 }
 
 function handleDrop(e) {
-  console.log("drop it");
   var dt = e.dataTransfer
   var files = dt.files
   handleFiles(files)
@@ -44,29 +42,60 @@ function handleDrop(e) {
 var files;
 
 function handleFiles(files){
-  console.log(files);
   files = [...files]
   document.querySelector("#file-name").textContent = files[0].name;
 }
 
-const thisForm = document.getElementById('myForm');
-	thisForm.addEventListener('submit', async function (e) {
-    e.preventDefault();
+window.onload = () => {
+  let submit = document.getElementById("sendButton");
+  submit.addEventListener("click", (e) => {
 
-	var input = document.querySelector('input[type="file"]')
+    let f;
+    let input = document.querySelector('input[type="file"]');
 
-	var data = new FormData()
-  // update form details properly
-	data.append('document', input.files[0])
-	data.append('name', 'my name')
-	data.append('email', 'my@email.com')
-	data.append('remark', 'my remark')
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let remark = document.getElementById("remark").value;
 
+    let data = new FormData();
 
-	fetch('https://pyron.pythonanywhere.com/contact/api/v2/', {
-		method: 'POST',
-		body: data
-	})
+    if(input.files[0]){
+      data.append('document', input.files[0]);
+    }
+    
+    data.append('name', name);
+    data.append('email', email);
+    data.append('remark', remark);
 
+    fetch('https://pyron.pythonanywhere.com/contact/api/v2/', {
+      method: 'POST',
+      body: data
+    }).then(res => {
+      if(res.status == 201){
+        success();
+      } else {
+        failure();
+      }
+    });
+  });
+}
 
-});
+function success() {
+    $(".notify").toggleClass("active");
+    $("#notifyType").toggleClass("success");
+    
+    setTimeout(function(){
+      $(".notify").removeClass("active");
+      $("#notifyType").removeClass("success");
+    },5000);
+}
+
+function failure() {
+  $(".notify").addClass("active");
+  $("#notifyType").addClass("failure");
+  
+  setTimeout(function(){
+    $(".notify").removeClass("active");
+    $("#notifyType").removeClass("failure");
+  }, 10000);
+}

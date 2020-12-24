@@ -5,7 +5,7 @@
     "background_color": "#F1F3F6",
     "display": "standalone",
     "scope": "/",
-    "start_url": "https://pyronlaboratory.github.io/all-star/",
+    "start_url": "./",
     "description": "Ronnie's Creative Space.",
     "orientation": "any",
     "icons": [
@@ -48,6 +48,5 @@
           "src": "./assets/icons/icon-512x512.png",
           "sizes": "512x512",
           "type": "image/png"
-        }
-  ]
+        }]
 }

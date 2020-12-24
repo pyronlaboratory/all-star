@@ -68,7 +68,7 @@
       </div>
       <div class="contact__upload_hint">
           <span>Need to send attachment with your message?</span>
-          <span><img src="https://www.jing.fm/clipimg/full/24-242581_checkmark-svg-clipart-green-tick-png.png" height="3em" /> Use the dropbox below to upload file before sending the message.</span>
+          <span style="background: #212121;padding: 2em;border-radius: 15px;color: white;font-size: 1em;text-align: left;width: 100%;line-height: 1.5em;"> Use the dropbox below to upload file before sending the message.</span>
           
       </div>
       <div class="contact__form flex-container col">
@@ -84,8 +84,8 @@
           <input type="textarea" name="remark" id="remark" class="floating-label-field floating-label-field--s1" placeholder="I'd like to discuss a project.." required>
           <label for="remark" class="floating-label">Message</label>
         </div>
-        <div class="send__button">
-          <span class="button" type="submit">Send.</span>
+        <div class="send__button" id="sendButton" type="submit">
+          <span class="button">Send.</span>
         </div>
       </div>
 
@@ -158,7 +158,7 @@
     </form>
 
     <div class="back">
-    <a href="./">
+    <a href="./index.html">
       <svg height="100px" width="100">
         <path d="M 47.5547,8.05465 H 4.94603 L 10.0165,3.00878 C 10.5822,2.44568 10.5844,1.53058 10.0213,0.964816 9.45823,0.398976 8.54305,0.396881 7.97729,0.959902 L 0.425238,8.47552 c -5.06e-4,4.4e-4 -8.67e-4,9.4e-4 -0.0013,0.00138 -0.564323,0.56309 -0.566129,1.48115 -1.45e-4,2.0461 5.06e-4,5e-4 8.67e-4,10e-4 0.001301,0.0014 L 7.97714,18.04 c 0.5657,0.563 1.48087,0.561 2.04406,-0.0049 0.5631,-0.5658 0.5609,-1.4809 -0.0049,-2.044 L 4.94603,10.9453 H 47.5547 C 48.353,10.9453 49,10.2982 49,9.49996 49,8.70172 48.353,8.05465 47.5547,8.05465 Z" fill="black"/>
       </svg> 
@@ -167,6 +167,8 @@
     </div>
   </div>
 
+  <div class="notify"><span id="notifyType" class=""></span></div>
+  
   <div class="overlay">
     <nav class="menu__container">
       <div class="menu__item">
@@ -261,11 +263,7 @@
       unmatch: function() {
         unloadJS('./scripts/menu.js');
       }
-    });
-
-
-
-  </script>  
+    });</script>  
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9ZPH52HK8"></script>
@@ -289,6 +287,7 @@
     });
   }
   </script>
+
 </body>
 
 </html>
