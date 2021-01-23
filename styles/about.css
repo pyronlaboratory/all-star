@@ -21,7 +21,7 @@
   padding: 4rem 0rem;
   /* box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2); */
   border-radius: 30px;
-  height: 70vh;
+  height: 450px;
   width: 25vw;
   background: #f1f3f6;
   /*border: 1px solid #cecece;*/
@@ -179,17 +179,15 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
   .profile__wrap {
     margin-left: 0em;
     margin-top: 0;
-    margin-bottom: 0;
-    flex-direction: row;
+    margin-bottom: 5vh;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     padding: 2em;
   }
 
-  .profile__desc {
-    width: 55%;
-  }
+  
 
   .profile__normalize {
     
@@ -201,7 +199,8 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
     direction: initial;
     overflow-y: initial;
     height: auto;
-    padding-left: 6.3vw;
+    padding: 2em 10em;
+    text-align: center;
   }
 
   .profile__text h1 {
@@ -210,14 +209,33 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
   }
 
   .profile__card {
-    width: 40vw;
-    margin-left: 8vw;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: normal;
+    min-height: 365px;
+    max-height: 365px;
+    width: 65vw;
+    margin-left: 0;
+  }
+
+  .profile__circle {
+    top: 75px;
+  }
+
+  .profile__desc {
+    width: 100%;
+    margin-top: 5vh; 
+  }
+
+  body > div.profile.flex-container.row.center.align-center > div.profile__wrap.flex-container.col.center.align-center > div.profile__card__container.flex-container.col.center.align-center > div > div.profile__info > h3:nth-child(3) {
+      margin-top: 4vh;
   }
 
   .profile__kofi {
     display: flex;
-    width: 45vw;
-    height: 70vh;
+    width: 80vw;
+    height: 100%;
     justify-content: center;
     align-items: center;
   }
@@ -227,32 +245,29 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
     line-height: 2em;
     text-transform: initial;
     font-weight: 600;
-    margin-bottom: 10vh;
+    margin: 10vh;
     text-align: center;
-    color: #333;
+    color: #808080;
   }
 
 }
 
 @media (max-width: 900px) {
   .profile__text {
-    padding: 3.6em;
-    padding-right: 12em; 
+      padding: 2em 4em;
   }
 
   .profile__card {
-    width: 40vw;
-    min-height: 480px;
-    max-height: 480px;
     margin-top: 15vh;
-    margin-left: 8vw; 
+    margin-left: 8vw;
+    margin: 0; 
   }
   
 }
 
 @media (max-width: 850px) {
   .profile__desc {
-    width: 70%;
+    width: 100%;
   }
 
   .profile__kofi {
@@ -273,7 +288,7 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
     align-items: normal;
     min-height: 375px;
     max-height: 375px;
-    width: 70vw;
+    width: 90%;
     margin-left: 0;
   }
 
@@ -333,7 +348,7 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
   }
 
   .profile__kofi {
-    width: 80%;
+    width: 100%;
     margin: 0;
     margin-bottom: 10vh;
     padding: 0;
