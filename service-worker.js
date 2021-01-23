@@ -4,10 +4,10 @@ self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(cacheName).then(cache => {
       return cache.addAll([
-        'https://pyronlaboratory.github.io/all-star/',
-        'https://pyronlaboratory.github.io/all-star/index.html',
-        'https://pyronlaboratory.github.io/all-star/about.html',
-        'https://pyronlaboratory.github.io/all-star/contact.html'
+        'https://ronnie.tech',
+        'https://ronnie.tech/index.html',
+        'https://ronnie.tech/about.html',
+        'https://ronnie.tech/contact.html'
       ])
           .then(() => self.skipWaiting());
     })

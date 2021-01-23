@@ -1272,7 +1272,7 @@ body
 
   .connect {
     background: #2173ED;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     width: 100vw;
     border-radius: 0;
@@ -1468,6 +1468,13 @@ body
   }
 }
 
+
+@media (max-width: 450px) {
+
+  body > div.slides-container-mob > div.gallery > div:nth-child(2) > div > div:after, body > div.slides-container-mob > div.gallery > div:nth-child(3) > div > div:after, body > div.slides-container-mob > div.gallery > div:nth-child(4) > div > div:after, body > div.slides-container-mob > div.gallery > div:nth-child(5) > div > div:after {
+    margin-top: -3vh;
+  }
+}
 @media (max-width: 400px) {
   
 
