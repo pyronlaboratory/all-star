@@ -242,7 +242,8 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
 
   .profile__card {
     width: 40vw;
-    height: 85vh;
+    min-height: 480px;
+    max-height: 480px;
     margin-top: 15vh;
     margin-left: 8vw; 
   }
@@ -270,8 +271,9 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
     display: flex;
     justify-content: space-evenly;
     align-items: normal;
-    height: 55vh;
-    width: 65vw;
+    min-height: 375px;
+    max-height: 375px;
+    width: 70vw;
     margin-left: 0;
   }
 
@@ -280,11 +282,20 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
   }
 
   .profile__desc {
-    width: 100%;
+      width: 100%;
+      margin-top: 5vh;
   }
 
+  body > div.profile.flex-container.row.center.align-center > 
+  div.profile__wrap.flex-container.col.center.align-center > 
+  div.profile__card__container.flex-container.col.center.align-center > 
+  div > div.profile__info > h3:nth-child(3) {
+    margin-top: 4vh;
+  }
+
+
   .profile__kofi {
-    margin-top: 20vh;
+    margin-top: 0vh;
     padding-right: 0;
     align-items: center;
     width: 70%;
@@ -310,14 +321,23 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
 
   .profile__card {
     align-items: flex-end;
+    min-height: 350px;
+    max-height: 350px;
   }
 
-  body > div.profile.flex-container.row.center.align-center > div.profile__wrap.flex-container.col.center.align-center > div.profile__card__container.flex-container.col.center.align-center > div > div.profile__info > h3:nth-child(3) {
+  body > div.profile.flex-container.row.center.align-center > 
+  div.profile__wrap.flex-container.col.center.align-center > 
+  div.profile__card__container.flex-container.col.center.align-center > 
+  div > div.profile__info > h3:nth-child(3) {
     margin-top: 10%;
   }
 
   .profile__kofi {
     width: 80%;
+    margin: 0;
+    margin-bottom: 10vh;
+    padding: 0;
+    height: auto;
   }
   .profile__text {
     padding: 2em;
@@ -335,11 +355,26 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
-    height: max-content;
+    min-height: 500px;
+    max-height: 500px;
+    margin: 0;
+  }
+
+  .profile__circle {
+    top: 5vh;
   }
 
   .profile__kofi {
     width: 100%;
+  }
+
+  .signature {
+    margin-top: 5vh;
+    margin-bottom: 30vh;
+    height: 40px;
+    width: 280px;
+    color: white;
+    filter: invert(1);
   }
 
 }
@@ -350,9 +385,6 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
     padding: 0;
   }
 
-  .profile__kofi {
-    margin-top: 0;
-  }
 
   .profile__kofi_text {
     font-size: 1.4em;
