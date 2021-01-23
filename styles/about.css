@@ -362,9 +362,6 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
 
 @media (max-width: 550px) {
 
-  .profile__text p {
-    padding-right: 10%;
-  }
   
   .profile__card {
     align-items: center;
