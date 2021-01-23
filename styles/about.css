@@ -288,7 +288,7 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
     align-items: normal;
     min-height: 375px;
     max-height: 375px;
-    width: 90%;
+    width: 70vw;
     margin-left: 0;
   }
 
@@ -313,7 +313,7 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
     margin-top: 0vh;
     padding-right: 0;
     align-items: center;
-    width: 70%;
+    width: 100vw;
   }
 
   .profile__kofi_text {
