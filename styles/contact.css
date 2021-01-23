@@ -53,6 +53,25 @@ body {
   margin-top: 10vh;
 }
 
+.contact__upload_hint {
+  display: none;
+  width: 60vw;
+}
+
+.contact__upload_hint__text {
+    background: #e0e0e0;
+    padding: 2em;
+    border-radius: 15px;
+    color: #444444;
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+    width: 70%;
+    line-height: 1.5em;
+    margin-top: 10vh;
+}
+
+
 .myForm {
   
   z-index: 1;
@@ -134,10 +153,6 @@ body {
   box-shadow: inset 7px 7px 15px rgba(55, 84, 170, 0.15), inset -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2);
 }
 
-.contact__upload_hint {
-	display: none;
-	width: 60vw;
-}
 
 
 
@@ -246,13 +261,7 @@ body {
 	    font-weight: 800;
 	}
 
-	#myForm > div.contact__upload_hint > span:nth-child(2) {
-		font-size: 1.2em;
-	    font-weight: 500;
-	    margin-top: 5vh;
-    	width: 90vw;
-        line-height: 1em;
-	}
+
 
 	#myForm > div.contact__upload_hint > span:nth-child(2) > img{
 		height: 2.5em;
@@ -266,8 +275,9 @@ body {
 
 @media (max-width: 1000px) {
 	.contact__upload {
-	    height: 100vh;
+	    height: 100%;
 	    width: 90vw;
+      margin-bottom: 5vh;
 	}
 
 	.contact__form {
@@ -296,7 +306,53 @@ body {
 
 @media (max-width: 600px) {
 
+  #myForm > div.contact__upload.col > p:nth-child(1) {
+    margin: 10vh 4vh 0vh 4vh;
+  }
+
 	#drop-area {
 		width: 75vw;
 	}
+
+  #drop-area > label > span {
+    font-weight: 500;
+    color: #111;
+    text-align: center;
+  }
+
+  .contact__upload_hint {
+    width: 80%;
+  }
+
+  .contact__upload_hint__text {
+    width: 100%;
+  }
+
+  .contact__form {
+    padding: 4em;
+    height: 100%;
+  }
+
+  .contact__upload {
+    height: 100%;
+    width: 90vw;
+    margin-top: -5vh;
+    margin-bottom: 5vh;
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  .drop-area {
+    width: 80vw;
+  }
+
+  .contact__form {
+    padding: 3em;
+    height: 100%;
+  }
+  .contact__upload {
+    width: 100%;
+  }
 }
