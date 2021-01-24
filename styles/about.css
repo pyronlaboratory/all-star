@@ -377,7 +377,11 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
   }
 
   .profile__kofi {
-    width: 100%;
+    width: 100vw;
+  }
+
+  .profile__kofi_text {
+        margin: 4em 2em;
   }
 
   .signature {
@@ -389,9 +393,17 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
     filter: invert(1);
   }
 
+  span.kofitext {
+    padding: 0em 2em !important;  
+  }
+
+  a.kofi-button {
+    border-radius: 5px !important;
+  }
+
 }
 
-@media (max-width: 350px) {
+@media (max-width: 450px) {
 
   .profile__wrap {
     padding: 0;
@@ -401,6 +413,7 @@ body > div.profile.flex-container.row.center.align-center > div.profile__wrap.fl
   .profile__kofi_text {
     font-size: 1.4em;
   }
+
 
   img.kofiimg {
     width: 0px !important;
