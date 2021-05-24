@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Neue Haas Grotesk Dark';
+    font-display: swap;
+    src: local('Neue Haas Grotesk Black'), local('Neue-Haas-Grotesk--Black'),
+        url('NHG-Black.woff2') format('woff2'),
+        url('NHG-Black.woff') format('woff'),
+        url('NHG-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }

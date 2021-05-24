@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Neue Haas Grotesk Light';
+    font-display: swap;
+    src: local('Neue Haas Grotesk Light'), local('Neue-Haas-Grotesk--Light'),
+        url('NHG-Light.woff2') format('woff2'),
+        url('NHG-Light.woff') format('woff'),
+        url('NHG-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
