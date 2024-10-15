@@ -5,6 +5,18 @@ var color = "";
 var text = "";
 var id = "";
 return {
+    /**
+     * @description Generates HTML and CSS code for a Ko-fi donation button. It takes
+     * three parameters: text, color, and ID, and uses them to create a customizable
+     * button with a customizable background color and text.
+     *
+     * @param {string} pText - Used to specify the text to be displayed on the Ko-fi button.
+     *
+     * @param {string} pColor - Used to specify the background color of the "Ko-fi" button.
+     *
+     * @param {string} pId - Used to identify the Ko-fi user and is inserted into the
+     * generated HTML code.
+     */
     init: function(pText, pColor, pId) {
         color = pColor;
         text = pText;
@@ -15,10 +27,23 @@ return {
         html = "<link href='https://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>";
         html += '<div class=btn-container><a title="Support me on ko-fi.com" class="kofi-button" style="background-color:[color];" href="https://ko-fi.com/[id]" target="_blank"> <span class="kofitext"><img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="Ko-fi donations" class="kofiimg"/>[text]</span></a></div>';
     },
+    /**
+     * @description Constructs an HTML string by combining a predefined style with dynamic
+     * text and attributes. It replaces placeholders in the HTML string with actual values,
+     * such as color, text, and id, before returning the final HTML content.
+     *
+     * @returns {string} A string containing HTML markup with specified color, text, and
+     * id attributes replaced.
+     */
     getHTML: function() {
         var rtn = style + html.replace("[color]", color).replace("[text]", text).replace("[id]", id);
         return rtn;
     },
+    /**
+     * @description Replaces placeholders in a string template with actual values and
+     * writes the resulting HTML to the document, allowing dynamic rendering of text with
+     * specified color, text content, and ID.
+     */
     draw: function() {
         document.writeln(style + html.replace("[color]", color).replace("[text]", text).replace("[id]", id));
     }

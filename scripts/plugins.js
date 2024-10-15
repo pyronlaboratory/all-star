@@ -36,6 +36,17 @@ const isHover = e => e.parentElement.querySelector(':hover') === e;
 // });
 
 
+/**
+ * @description Determines whether a given HTML element is currently visible within
+ * the viewport of the web page by checking its position and dimensions relative to
+ * the viewport's dimensions.
+ *
+ * @param {HTMLElement} element - Checked to determine if it is currently visible
+ * within the viewport.
+ *
+ * @returns {boolean} `true` if the element is currently visible within the viewport
+ * and `false` otherwise.
+ */
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
