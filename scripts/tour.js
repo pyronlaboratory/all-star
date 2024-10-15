@@ -15,6 +15,11 @@ tour.addStep({
   classes: 'hero__instructions',
   buttons: [
     {
+      /**
+       * @description Returns the result of calling the `cancel` method on the current object.
+       *
+       * @returns {any} The result of calling `this.cancel()`.
+       */
       action() {
         return this.cancel();
       },
@@ -42,6 +47,11 @@ tour.addStep({
   classes: 'scroll__instructions',
   buttons: [
     {
+      /**
+       * @description Returns the result of calling the `cancel` method.
+       *
+       * @returns {object} Result of calling `this.cancel()`.
+       */
       action() {
         return this.cancel();
       },
@@ -49,6 +59,11 @@ tour.addStep({
       text: 'Skip'
     },
     {
+      /**
+       * @description Returns the result of calling the `back` method.
+       *
+       * @returns {object | undefined} The result of the `back()` method call.
+       */
       action() {
         return this.back();
       },
@@ -56,6 +71,12 @@ tour.addStep({
       text: 'Back'
     },
     {
+      /**
+       * @description Returns the result of the `next` function, which is presumably a
+       * method of the current object, likely used in an iterator or generator context.
+       *
+       * @returns {any} The result of calling the `next()` method.
+       */
       action() {
         return this.next();
       },
@@ -76,6 +97,12 @@ tour.addStep({
   classes: 'action__instructions',
   buttons: [
     {
+      /**
+       * @description Returns the result of calling the `cancel` method on the current
+       * object, effectively delegating its functionality to the `cancel` method.
+       *
+       * @returns {any} The result of the `cancel` method.
+       */
       action() {
         return this.cancel();
       },
@@ -83,6 +110,12 @@ tour.addStep({
       text: 'Skip'
     },
     {
+      /**
+       * @description Returns the result of calling the `back` method, implying a navigation
+       * or undo action.
+       *
+       * @returns {object} Returned by the `back` method.
+       */
       action() {
         return this.back();
       },
@@ -90,6 +123,11 @@ tour.addStep({
       text: 'Back'
     },
     {
+      /**
+       * @description Returns the result of calling the `next` method on the current object.
+       *
+       * @returns {any} The result of calling the `next` method.
+       */
       action() {
         return this.next();
       },
@@ -110,6 +148,12 @@ tour.addStep({
   classes: 'menu__instructions',
   buttons: [
     {
+      /**
+       * @description Returns the result of calling the `back` method, likely used for
+       * navigation or undo purposes in a stack-based data structure.
+       *
+       * @returns {any} The result of calling the `back` method.
+       */
       action() {
         return this.back();
       },
@@ -117,6 +161,11 @@ tour.addStep({
       text: 'Back'
     },
     {
+      /**
+       * @description Returns the result of the `cancel` method.
+       *
+       * @returns {boolean} The result of the `cancel` method.
+       */
       action() {
         return this.cancel();
       },
