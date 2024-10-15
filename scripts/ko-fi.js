@@ -5,6 +5,19 @@ var color = "";
 var text = "";
 var id = "";
 return {
+    /**
+     * @description Generates HTML and CSS code for a Ko-fi donation button. It takes
+     * three parameters: text, color, and ID, and returns a formatted HTML string with a
+     * customizable button.
+     *
+     * @param {string} pText - Used to set the text that will be displayed on the ko-fi
+     * button.
+     *
+     * @param {string} pColor - Used to specify the background color of the button.
+     *
+     * @param {string} pId - Used to identify the user's Ko-fi ID in the generated HTML
+     * and CSS.
+     */
     init: function(pText, pColor, pId) {
         color = pColor;
         text = pText;
@@ -15,10 +28,22 @@ return {
         html = "<link href='https://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>";
         html += '<div class=btn-container><a title="Support me on ko-fi.com" class="kofi-button" style="background-color:[color];" href="https://ko-fi.com/[id]" target="_blank"> <span class="kofitext"><img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="Ko-fi donations" class="kofiimg"/>[text]</span></a></div>';
     },
+    /**
+     * @description Constructs a string of HTML by replacing placeholders in a template
+     * with actual values, then appends a CSS style string.
+     *
+     * @returns {string} A string containing HTML code that combines a variable `style`,
+     * replaced text, and a variable `id`.
+     */
     getHTML: function() {
         var rtn = style + html.replace("[color]", color).replace("[text]", text).replace("[id]", id);
         return rtn;
     },
+    /**
+     * @description Generates and displays HTML content on a webpage. It replaces
+     * placeholders in a predefined HTML template with actual values, including color,
+     * text, and id, and then writes the resulting string to the document using `document.writeln`.
+     */
     draw: function() {
         document.writeln(style + html.replace("[color]", color).replace("[text]", text).replace("[id]", id));
     }

@@ -62,6 +62,13 @@ $document.touchwipe({
 *   Getting the pressed key. Only if it's up or down arrow, we go to prev or next slide and prevent default behaviour
 *   This way, if there's text input, the user is still able to fill it
 * */
+/**
+ * @description Handles keyboard input events. It checks the pressed key code and
+ * performs actions accordingly, such as navigating slides or a gallery, and prevents
+ * default event behavior.
+ *
+ * @param {object} event - An object that represents the event triggered by a key press.
+ */
 function onKeyDown(event) {
   var PRESSED_KEY = event.keyCode;
 
@@ -93,6 +100,14 @@ function onKeyDown(event) {
 /*
 *   When user scrolls with the mouse, we have to change slides
 * */
+/**
+ * @description Handles mouse wheel events, determining whether the user scrolled up
+ * or down. It then navigates to the previous or next slide based on the scroll
+ * direction and prevents default browser behavior.
+ *
+ * @param {any} event - Used to receive information about the mouse wheel event that
+ * triggered the function call.
+ */
 function onMouseWheel(event) {
   //Normalize event wheel delta
   var delta = event.originalEvent.wheelDelta / 30 || -event.originalEvent.detail;
@@ -113,6 +128,11 @@ function onMouseWheel(event) {
 /*
 *   If there's a previous slide, slide to it
 * */
+/**
+ * @description Navigates to the previous slide when called, by checking if the current
+ * slide has a previous sibling. If it does, it calls another function `goToSlide`
+ * to navigate to that previous slide.
+ */
 function goToPrevSlide() {
   if($currentSlide.prev().length)
   {
@@ -123,6 +143,10 @@ function goToPrevSlide() {
 /*
 *   If there's a next slide, slide to it
 * */
+/**
+ * @description Navigates to the next slide in a sequence, if one exists, by calling
+ * the `goToSlide` function with the next slide as an argument.
+ */
 function goToNextSlide() {
   if($currentSlide.next().length)
   {
@@ -133,6 +157,14 @@ function goToNextSlide() {
 /*
 *   Actual transition between slides
 * */
+/**
+ * @description Animates a slide transition by scrolling to the specified slide within
+ * the `$slidesContainer` element, setting the `isAnimating` flag to true, and
+ * triggering the `onSlideChangeEnd` callback upon completion.
+ *
+ * @param {(number[] | object)} $slide - Representing a slide to be navigated, likely
+ * an object or an array of objects with slide properties.
+ */
 function goToSlide($slide) {
   //If the slides are not changing and there's such a slide
   if(!isAnimating && $slide.length)
@@ -151,6 +183,10 @@ function goToSlide($slide) {
 *   Once the sliding is finished, we need to restore "isAnimating" flag.
 *   You can also do other things in this function, such as changing page title
 * */
+/**
+ * @description Sets the `isAnimating` variable to `false` after a slide change has
+ * ended, indicating that the animation is complete and no longer in progress.
+ */
 function onSlideChangeEnd() {
   isAnimating = false;
 }
@@ -158,6 +194,12 @@ function onSlideChangeEnd() {
 /*
 *   When user resize it's browser we need to know the new height, so we can properly align the current slide
 * */
+/**
+ * @description Resizes the slides when the window is resized vertically, ensuring
+ * the current slide remains at the top and maintaining its position within the container.
+ *
+ * @param {object} event - Passed by the event listener when the window is resized.
+ */
 function onResize(event) {
 
   //This will give us the new height of the window
@@ -188,10 +230,24 @@ var index = 1;
 show(index);
 
 // Next/previous controls
+/**
+ * @description  increments a global variable `index` by the value of `n` and then
+ * calls another function `show` with the new value of `index` as an argument.
+ *
+ * @param {number} n - Incrementing the `index` by the value of `n`.
+ */
 function next(n) {
   show(index += n);
 }
 
+/**
+ * @description Displays a specific slide in a gallery based on the provided index
+ * `n`. It adjusts the index to be within the valid range, hides all slides, and shows
+ * the selected slide, updating the current and total slide indicators accordingly.
+ *
+ * @param {number} n - Used to determine the current slide index and update the
+ * corresponding elements.
+ */
 function show(n) {
   var i;
   var slides = document.getElementsByClassName("gallery__container");
