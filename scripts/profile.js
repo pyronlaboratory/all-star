@@ -9,6 +9,8 @@ const info = document.querySelector(".profile__info");
 
 
 container.addEventListener("mousemove", (e) => {
+  // Handles mouse movement events on a container element, updating the rotation of a
+  // card element based on mouse position.
   let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
   let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
   card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
@@ -16,6 +18,7 @@ container.addEventListener("mousemove", (e) => {
 
 // animation in
 container.addEventListener("mouseenter", (e) => {
+  // Modifies styles and attributes on hover.
   card.style.transition = "none";
   title.style.transform = "translateZ(150px)";
   avatar.src="./assets/image/avatar-1.svg";
@@ -26,6 +29,7 @@ container.addEventListener("mouseenter", (e) => {
 
 //animation out
 container.addEventListener("mouseleave", (e) => {
+  // Handles the mouse leave event of a container element.
   card.style.transition = "all 1s ease";
   title.style.transform = "translateZ(0px)";
   avatar.src="./assets/image/avatar-2.svg";
